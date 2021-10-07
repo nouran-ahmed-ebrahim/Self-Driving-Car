@@ -12,7 +12,7 @@ from keras.models import Model, Sequential
 # Read the measurements and the files names from the .csv file
 csvlines = []    # append the files names and the measurements here
 
-with open('C:/Users/AAAAA/Downloads/simulator-windows-64/models/race/3/driving_log.csv') as csvfile:
+with open('C:/Users/AAAAA/Downloads/simulator-windows-64/models/race/4/driving_log.csv') as csvfile:
     reader = csv.reader(csvfile)
     for line in reader:
         csvlines.append(line)
@@ -74,7 +74,7 @@ model.add(Flatten())
 model.add(Dense(128, activation = 'relu'))
 model.add(Dropout(0.5))
 
-model.add(Dense(64, activation = 'relu'))
+model.add(Dense(128, activation = 'relu'))
 model.add(Dropout(0.5))
 
 model.add(Dense(1))
